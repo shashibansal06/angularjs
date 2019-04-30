@@ -1,0 +1,36 @@
+<app-banner>My Projects</app-banner>
+<div class="admin-main grey-layout">
+<div class="common-page dashboard-page">
+  <div class="form-group">
+    <label>Show Result</label>
+    <div class="select-outer">
+      <select class="form-control">
+        <option>All</option>
+        <option>All</option>
+      </select>
+    </div>
+  </div>
+  <div class="box" *ngFor="let list of [1,2,3]">
+    <div class="row align-items-start justify-content-between box-inner">
+      <div class="col-lg-8 col-xl">
+        <div class="row">
+          <div class="col-md-8">
+            <h2 class="project-no"><span>Project 1</span></h2>
+            <h3>Requried Spa Android App</h3>
+            <p>Description : Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua….. </p>
+          </div>
+          <div class="col-md-3 offset-md-1">
+            <h4>2</h4>
+            <p routerLink="/interested-developer"><u>Developers<br> Showed Interest</u></p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-xl-auto right_sec">
+        <h2>Status</h2>
+        <h3 class="green">Approved</h3>
+        <button class="btn themeBtn min-width-140">View Project</button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>

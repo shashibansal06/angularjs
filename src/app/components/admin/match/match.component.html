@@ -1,0 +1,35 @@
+<div class="box" *ngFor="let list of [1,2,3]">
+  <div class="row align-items-start justify-content-between box-inner">
+    <div class="col-lg-8 col-xl">
+      <div class="row">
+        <div class="col-md-8">
+          <div class="d-flex align-items-center">
+            <div  class="user-img">
+              <img alt="image" class="img-fluid" src="assets/images/profile.jpg">
+            </div>
+            <div class="">
+              <h2>John Smith</h2>
+              <h3>UI Designer</h3>
+            </div>
+          </div>
+          <p>Experts in android and ios apps interface , website and logo design </p>
+        </div>
+        <div class="col-md-4 progress-status">
+          <div class="mr-3"><img alt="image" class="img-fluid" src="assets/images/progress.png"></div>
+          <div class="">
+            <h2>64%</h2>
+            <h3>Match</h3>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="col-lg-4 col-xl-auto right_sec">
+      <h2>Price</h2>
+      <h3>$10/per hour</h3>
+      <button class="btn themeBtn min-width-140" *ngIf="router.url === '/dashboard'">View</button>
+      <button class="btn themeBtn min-width-140" *ngIf="router.url === '/favourite-developer'">View</button>
+      <button class="btn themeBtn min-width-140" *ngIf="router.url === '/developer-matching'">Get Contacts</button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,46 @@
+@import 'style/base';
+.create-edu-detail{
+  h2{
+    @include text-format-weight(1.25em,$darksky,500);
+    padding-top: 1em;
+    margin-bottom: 1em;
+    i{
+      cursor: pointer;
+      &:before{
+        @include text-format-weight(1.3em, $orange,600);
+      }
+    }
+  }
+  .uploadbtn{
+    overflow: hidden;
+    width: 150px;
+    @include pos(r, null);
+    input{
+      @include pos(a, 0px null null 0px );
+      @include height-width(100%,150px);
+      cursor: pointer;
+      opacity: 0;
+    }
+  }
+  .uploaded-doc{
+    @include pos(r,null);
+    margin-right:1em;
+    .img-out{
+      @include height-width(115px,104px);
+      overflow: hidden;
+      margin-top: 18px;
+      img{
+        border:1px solid $black;
+        @include imgfit(100%,cover,100%);
+      }
+    }
+    .btn{
+      @include pos(a, 0em  0 null null);
+      @include text-format-weight(0.8em, $orange,600);
+      background-color: transparent;
+      padding:0;
+    }
+
+
+  }
+}

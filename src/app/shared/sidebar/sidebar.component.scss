@@ -1,0 +1,66 @@
+@import 'style/base';
+.sidebar{
+  background-color: #222;
+  @include pos(f,0 null null 0);
+  width:14.5em;
+  height: 100vh;
+  z-index: 9;
+  @media screen and (max-width:767px){
+    height: auto;
+    width: 100%;
+    position: static;
+    padding: 10px 15px;
+  }
+  .logo-outer{
+    .logo{
+      padding: 4em 2.3em;
+      @media screen and (max-width:1200px){
+        padding: 2em 2.3em;
+      }
+      @media screen and (max-width:767px){
+        width: 120px;
+        padding:0;
+      }
+    }
+    .menu-icon{
+      display: none;
+      @media screen and (max-width:767px){
+        display: block;
+      }
+      span{
+        cursor: pointer;
+        color: $white;
+        font-size: 24px;
+      }
+    }
+  }
+  nav{
+    @media screen and (max-width:767px){
+      @include translateX(-100%);
+      @include pos(f,0 null null 0);
+      overflow: auto;
+      height: 100vh;
+      width: 200px;
+      background-color: #222;
+      z-index: 1;
+      @include animate(0.5s,linear);
+    }
+    &.selected{
+      @include translateX(0%);
+    }
+    ul{
+      li{
+        a{
+          padding: 1.1em 0 1.1em 2.3em;
+          border-left:3px solid transparent;
+          @include text-format-weight(0.95em,$white,500);
+          display: block;
+          &.active,&:hover{
+            border-color:$sky;
+            background: linear-gradient(90deg, rgba($white,0.5) 12%, #222 100%);
+          }
+        }
+      }
+    }
+  }
+}

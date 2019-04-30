@@ -1,0 +1,45 @@
+@import 'style/base';
+.box{
+  border: 1px solid #E8E8E8;
+  background-color: $white;
+  padding: 2em 2em;
+  margin-bottom: 0.90em;
+  @media screen and (max-width:767px){
+    padding: 1em;
+  }
+  .user-img{
+    @include height-width(48px,48px);
+    @include radius(50%);
+    overflow: hidden;
+    @media screen and (max-width:767px){
+      @include height-width(30px,30px);
+      margin-right: 1em;
+      margin-bottom: 10px;
+    }
+    img{
+      @include imgfit(100%,cover,100%);
+    }
+  }
+  .rating-info{
+    padding: 0 15px;
+    @media screen and (max-width:767px){
+      padding: 0px;
+    }
+    .row{
+      @media screen and (max-width:767px){
+        display: block;
+      }
+    }
+  }
+  h3{
+    @include text-format-weight(1em,$black,600);
+  }
+  h4{
+    @include text-format-weight(0.8em,rgba($black,0.5),400);
+  }
+  p{
+    margin:0.5em 0 0.2em 0;
+    font-size: 0.95em;
+  }
+}
+

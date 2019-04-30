@@ -1,0 +1,23 @@
+@import 'style/base';
+.admin-footer{
+  @include text-format-weight(11px, #8992CA, 500);
+  @include pos(f, null null 0 0);
+  z-index: 9;
+  @media screen and (max-width:767px){
+    position: static;
+  }
+  span{
+    background-color: #222;
+    width: 21.1em;
+    text-align: center;
+    padding: 25px 0;
+    display: block;
+    @media screen and (max-width:1400px){
+      width: 18.3em;
+    }
+    @media screen and (max-width:767px){
+      width: 100%;
+      padding: 15px 0;
+    }
+  }
+}

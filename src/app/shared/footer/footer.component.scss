@@ -1,0 +1,69 @@
+@import 'style/base';
+.footer{
+  @include text-format-weight(1em,$color-39,500);
+  @include box-shadow-n(0,0, 10px, rgba($black,0.4));
+  padding: 3.5em 0;
+  @media screen and (max-width:767px){
+    padding: 2em 0;
+  }
+  p{
+    margin-bottom: 2em;
+  }
+  h2{
+    @include text-format-weight(1.5em,$color-39,600);
+  }
+  ul{
+    &.foot-links{
+      li{
+        @include pos(r, null);
+        display: inline-block;
+        padding:0 1.6em;
+        @media screen and (max-width:1200px){
+          padding:0 1em;
+        }
+        &:after{
+          content:'/';
+          @include pos(a,0 -3px null null);
+        }
+        a{
+          color: $color-39;
+          &:hover,&.active{
+            color: $orange;
+          }
+        }
+        &:last-child{
+          &:after{
+            content: none;
+          }
+        }
+      }
+    }
+    &.social-links{
+      margin-top: 2em;
+      li{
+        display: inline-block;
+        padding: 0 0.9em;
+        @media screen and (max-width:1200px){
+          padding:0 1em;
+        }
+        a{
+          display: inline-block;
+          @include height-width(2.6em,2.6em);
+          background-color: #eee;
+          @include radius(50%);
+          line-height: 2.6em;
+          font-size: 0.9em;
+          i{
+            color: #919191;
+          }
+          &:hover,&:focus{
+            background-color: $orange;
+            i{
+              color: $white;
+            }
+          }
+        }
+      }
+    }
+  }
+}

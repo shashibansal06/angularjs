@@ -1,0 +1,12 @@
+@import 'style/base';
+.post-next-page{
+  .form-feilds{
+    margin-bottom: 2em;
+    label{
+      @include text-format-weight( 0.95em ,$black,500);
+    }
+  }
+  .submit-btn{
+    margin-top: 3em;
+  }
+}

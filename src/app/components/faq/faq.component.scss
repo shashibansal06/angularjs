@@ -1,0 +1,39 @@
+@import 'style/base';
+
+
+@import 'style/base';
+.contentpages{
+  h2{
+    @include text-format-weight(1.1em,$darksky,600);
+    margin-bottom:0.8em;
+  }
+  p{
+    color: $black;
+    text-align: justify;
+  }
+  .submit-btn{
+    margin-top: 2.5em;
+  }
+  .panel{
+    margin-bottom: 1em;
+    .card-header{
+      background-color: $white;
+      font-weight: 600;
+      @include radius(0);
+      cursor: pointer;
+      .arrow{
+        @include display(top);
+        margin-top: 2px;
+        font-size: 1.3em;
+      }
+      .heading{
+        width:calc(100% - 50px;);
+        @include display(top);
+        padding-left: 15px;
+      }
+    }
+    .panel-collapse{
+      background-color: #FBFBFB;
+    }
+  }
+}

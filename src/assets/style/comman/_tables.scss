@@ -1,0 +1,14 @@
+.table{
+  &.custom-table{
+    tr{
+      th{
+        background-color: $sky;
+        @include text-format-weight(1em,$white,400);
+      }
+      td{
+        background-color: $white;
+        @include text-format-weight(1em,#6D6E70,400);
+      }
+    }
+  }
+}

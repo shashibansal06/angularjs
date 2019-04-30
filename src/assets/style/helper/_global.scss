@@ -1,0 +1,40 @@
+/* ---------------------------------------------------------------------------------------------------- */
+/* Reset */
+ul,li{
+  list-style: none;
+  margin:0;
+  padding:0;
+}
+a{
+  color: $darksky;
+  -webkit-transition: all linear 0.5s;
+    transition: all linear 0.5s;
+    -moz-transition: all linear 0.5s;
+}
+a:focus{
+  outline: 0 none;
+  text-decoration: none;
+}
+a:hover{
+  text-decoration: none;
+}
+body{
+  font-family: $family !important;
+  color: $black;
+  background-color: $white;
+  font-weight: 400;
+  font-size: 16px;
+  @media screen and (max-width:1367px){
+    font-size: 15px;
+  }
+  @media screen and (max-width:1200px){
+    font-size: 14px;
+  }
+  @media screen and (max-width:767px){
+    font-size: 13px;
+  }
+}
+
+.form-control:focus{
+  @include box-shadow-none();
+}

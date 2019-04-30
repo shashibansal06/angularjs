@@ -1,0 +1,23 @@
+<header class="header" [class.sticky]="scroll >= 0 && scroll > 10">
+  <div class="container">
+    <div class="row justify-content-between align-items-center">
+      <div class="logo">
+        <a routerLink="/home" class="active blue-logo"><img src="assets/images/dev_gap_logo.png" class="img-fluid"></a>
+        <a routerLink="/home" class="active white-logo"><img src="assets/images/white-logo.png" class="img-fluid"></a>
+      </div>
+      <div class="right-side">
+        <nav [class.menu-show]="menutoggle">
+          <ul>
+            <li><a  routerLink="/home"  routerLinkActive="active">HOME</a></li>
+            <li><a   href="/home/#howitworks">HOW IT WORKS</a></li>
+            <li><a  href="/home/#testimonial">TESTIMONALS</a></li>
+            <li><a routerLink="/signup" routerLinkActive="active">SIGN UP</a></li>
+            <li><a routerLink="/sign-in" routerLinkActive="active">LOGIN</a></li>
+          </ul>
+        </nav>
+        <button class="btn themeBtn"  routerLink="/post-job">Post a Project <i class="icon-right-arrow"></i></button>
+        <div class="menu" (click)="menu()"><i class="icon-menu-three-line"></i></div>
+      </div>
+    </div>
+  </div>
+</header>

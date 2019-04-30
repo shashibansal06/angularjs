@@ -1,0 +1,21 @@
+@import 'style/base';
+.admin-content{
+  padding-left: 14.5em;
+  @media screen and (max-width:767px){
+    padding-left: 0px;
+  }
+  .admin-main{
+    padding: 3em;
+    min-height: calc(100vh - 198px);
+    @media screen and (max-width:992px){
+      padding: 2em;
+    }
+    @media screen and (max-width:767px){
+      padding: 1em;
+    }
+    &.grey-layout{
+      background-color: #f5f6fa;
+
+    }
+  }
+}

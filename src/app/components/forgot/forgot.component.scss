@@ -1,0 +1,33 @@
+@import 'style/base';
+.center-layout{
+  .left-side{
+    .forgotpage{
+      .back-btn{
+        background-color: transparent;
+        padding: 0;
+        margin-bottom: 1em;
+        border:0 none;
+        @include text-format(2em, $orange);
+        cursor: pointer;
+      }
+      h1{
+        margin-bottom: 0.4em;
+      }
+      p{
+        margin-bottom: 2em;
+        color: #6D6E70;
+      }
+      .more-info{
+        padding-top:2em;
+        border-top:1px dashed #D8D8D8;
+        margin-top: 3em;
+        @media screen and (max-width:992px){
+          padding-top:1em;
+          border-top:1px dashed #D8D8D8;
+          margin-top: 1.5em;
+        }
+      }
+    }
+  }
+}
+

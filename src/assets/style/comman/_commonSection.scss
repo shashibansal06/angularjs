@@ -1,0 +1,260 @@
+.relative{
+  position: relative;
+}
+.row{
+  &.row-10{
+    margin-left: -10px;
+    margin-right: -10px;
+    @media screen and (max-width:992px){
+      margin-left: -5px;
+      margin-right: -5px;
+    }
+    [class*="col-"]{
+      padding-left: 10px;
+      padding-right:10px;
+      @media screen and (max-width:992px){
+        padding-left: 5px;
+        padding-right:5px;
+      }
+    }
+  }
+}
+
+textarea{
+  resize:vertical;
+  min-height:200px;
+}
+.form-group{
+  @include pos(r, null);
+  margin-bottom: 0.6em;
+  &.input-group{
+    input{
+      border-right:0 none;
+    }
+    .input-group-text{
+      background-color: transparent;
+      cursor: pointer;
+      color: #9c9c9c;
+      border-color: #E3E3E9;
+      @include radius(0px);
+    }
+  }
+  label{
+    font-weight: normal;
+  }
+  input,select,textarea{
+    &.form-control{
+      @include appear(none);
+      @include text-format-weight(0.95em,$black,500);
+      @include radius(0px);
+      @include box-shadow-none(none);
+      padding: 1em 0.9em 1em 1em;
+      transition:none;
+      -moz-transition:none;
+      -webkit-transition:none;
+      border-color:#E3E3E9;
+      height: auto;
+      background-color: $white;
+      &:focus{
+        border-color:$orange;
+      }
+    }
+  }
+  .select-outer{
+    @include pos(r, null);
+    height: 100%;
+    z-index: 1;
+    &:after {
+      @include pos(a, calc(50% - 7px) 15px auto auto);
+      content: "\e903";
+      font-family: 'icomoon' !important;
+      @include text-format-weight(10px,#646464,400);
+      z-index: -1;
+    }
+    select{
+      height: 100%;
+      @include appear(none);
+      cursor: pointer;
+       background-color: transparent;
+    }
+  }
+  // .cal-outer{
+  //   @include pos(r, null);
+  //   z-index: 1;
+  //   &:after {
+  //     @include pos(a, calc(50% - 12px) 15px auto auto);
+  //     content: "\e91c";
+  //     font-family: 'icomoon' !important;
+  //     @include text-format-weight(16px,#646464,400);
+  //     z-index: -1;
+  //     @media screen and (max-width:1200px){
+  //       top: calc(50% - 12px);
+  //       right: 10px;
+  //       font-size: 18px;
+  //     }
+  //   }
+  //   input{
+  //     background-color: transparent;
+  //   }
+  // }
+}
+.radio-outer{
+  label{
+    &.z_radio{
+        @include pos(r, null);
+        @include text-format(14px,$black);
+        font-weight: 400;
+        margin: 0 25px 0 25px;
+        &:first-child{
+          margin-left: 0;
+        }
+        @media screen and (max-width:1400px){
+          	font-size: 14px;
+        }
+         @media screen and (max-width:565px){
+           display: block;
+           margin-bottom: 10px;
+           margin-left: 0;
+        }
+        span{
+            @include padding-left(30);
+            @include pos(r, null);
+            cursor: pointer;
+            &:after {
+              @include pos(a, 5px auto auto 5px);
+              content:none;
+              @include square(8px);
+              background-color:$darksky;
+              @include radius(50%);
+            }
+            &:before {
+              @include pos(a, 0px auto auto 0px);
+              border:2px solid $darksky;
+              content: "";
+              @include square(18px);
+              @include radius(50%);
+            }
+            i{
+              margin-left:5px;
+              font-size: 16px;
+              vertical-align: text-bottom;
+            }
+            .form-group{
+              display: inline-block;
+              margin-left: 10px;
+              @media screen and (max-width:479px){
+                display: block;
+                margin-left: 0;
+                margin-top: 5px;
+              }
+            }
+        }
+        input[type="radio"]{
+            @include pos(a, 0px auto auto 0px );
+            visibility: hidden;
+            &:checked{
+                &+ span{
+                    &:after{
+                      content:'';
+                    }
+                    &:before {
+                      border-color:$darksky;
+                    }
+                }
+            }
+        }
+    }
+    &.z_checked{
+        @include pos(r, null);
+        @include text-format-weight(1.1em,$darksky,600);
+       span{
+            @include padding-left(35);
+            @include pos(r, null);
+            cursor: pointer;
+            display: inline-block;
+            &:after {
+              @include pos(a, 4px auto auto 5px );
+              content:'';
+              @include text-format(12px,$white);
+              font-family: 'icomoon' !important;
+            }
+            &:before {
+              @include pos(a, 2px  auto auto 0px);
+              border:2px solid $darksky;
+              @include square(22px);
+              content: "";
+            }
+          }
+        input[type="checkbox"]{
+            @include pos(a, 0px auto auto 0px );
+            visibility: hidden;
+            &:checked{
+                &+ span{
+                    &:after{
+                        content:"\e909";
+                    }
+                    &:before{
+                        background-color:$darksky;
+                    }
+                }
+            }
+        }
+    }
+  }
+}
+.imgPhoto{
+  padding-right: 12px;
+  .uploadedimg{
+    @include height-width(87px,87px);
+    @include radius(50%);
+    border:3px solid $white;
+    overflow: hidden;
+    @media screen and (max-width:992px){
+      @include height-width(60px,60px);
+    }
+    img{
+      @include imgfit(100%,cover,100%);
+    }
+  }
+}
+
+.editimg-outer{
+  display: inline-block;
+  margin-bottom: 1.5em;
+  .image{
+    @include height-width(138px,138px);
+    @include radius(50%);
+    border:5px solid $sky;
+    overflow: hidden;
+    @media screen and (max-width:992px){
+      @include height-width(100px,100px);
+    }
+    img{
+      @include imgfit(100%,cover,100%);
+    }
+  }
+  .upload-icon{
+    @include height-width(43px,43px);
+    @include radius(50%);
+    background-color: $orange;
+    color: $white;
+    font-size:22px;
+    line-height: 46px;
+    display: inline-block;
+    @include pos(r, null);
+    overflow: hidden;
+    margin-top: -35px;
+    @media screen and (max-width:992px){
+      @include height-width(30px,30px);
+      font-size:16px;
+      line-height: 33px;
+      margin-top: -25px;
+    }
+    input{
+      @include pos(a, null null null 0);
+      @include height-width(100%,100%);
+      opacity: 0;
+      cursor: pointer;
+    }
+  }
+}

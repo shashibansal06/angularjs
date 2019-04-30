@@ -1,0 +1,27 @@
+<app-banner>Dashboard</app-banner>
+<div class="admin-main grey-layout">
+  <div class="common-page">
+    <!-- uncomment when no data start-->
+    <div class="no-data d-none text-center">
+      <div class="image">
+        <img src="assets/images/no-data.svg" alt="" class="img-fluid">
+      </div>
+      <p>Nothing to show</p>
+      <p>Search the projects, get contact details of the clients and start working with them</p>
+      <p>Or</p>
+      <div class=""><button class="btn themeBtn min-width-140">Search Project</button></div>
+    </div>
+    <!-- uncomment when no data end-->
+    <div class="row align-items-center toprow">
+      <div class="col-12 text-sm-right">
+          <div class="form-group radio-outer">
+            <label class="z_checked">
+                <input type="checkbox" name="checkboxInline">
+                <span>Show only perfect match</span>
+            </label>
+          </div>
+      </div>
+    </div>
+    <app-match></app-match>
+  </div>
+</div>

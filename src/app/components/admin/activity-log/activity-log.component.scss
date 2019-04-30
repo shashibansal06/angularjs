@@ -1,0 +1,32 @@
+@import 'style/base';
+.activity-page{
+	.box-outer{
+		margin-bottom: 1.5em;
+		h4{
+			@include text-format-weight(1em,$black,500);
+			margin-bottom:1em;
+		}
+		.box{
+			padding: 1.5em 1.5em;
+			margin-bottom: 8px;
+      border: 1px solid #E8E8E8;
+      background-color: $white;
+      @include radius(4px);
+			@media screen and (max-width:992px){
+				padding: 10px 15px;
+			}
+		}
+		p{
+			color: rgba($black,0.7);
+      margin-bottom: 0;
+      span{
+        display: block;
+      }
+			a{
+				color:$sky;
+				text-decoration: underline;
+			}
+		}
+	}
+}
+

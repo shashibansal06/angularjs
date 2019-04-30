@@ -1,0 +1,35 @@
+<app-banner>My Projects</app-banner>
+<div class="admin-main grey-layout">
+<div class="common-page interested-developer">
+  <div class="row align-items-center toprow">
+    <div class="col-4">
+      <button class="back-btn mb-2 mb-lg-3"><i class="icon-back-arrow"></i> Back</button>
+    </div>
+    <div class="col-8 text-right">
+      <h5>Total Interested Developers : 2</h5>
+    </div>
+  </div>
+
+  <div class="box" *ngFor="let list of [1,2,3]">
+    <div class="row align-items-start justify-content-between box-inner">
+      <div class="col-lg-8 col-xl">
+        <div class="d-flex align-items-center">
+          <div  class="user-img">
+            <img alt="image" class="img-fluid" src="assets/images/profile.jpg">
+          </div>
+          <div class="">
+            <h2>John Smith</h2>
+            <h3>UI Designer</h3>
+          </div>
+        </div>
+        <p>Experts in android and ios apps interface , website and logo design </p>
+      </div>
+      <div class="col-lg-4 col-xl-auto right_sec">
+        <h2>Price</h2>
+        <h3>$10/per hour</h3>
+        <button class="btn themeBtn min-width-140">View Profile</button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>

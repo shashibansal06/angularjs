@@ -1,0 +1,46 @@
+.btn{
+  &.themeBtn{
+    @include btn-mixin($orange,$orange);
+    @include text-format-weight(1em,$white,bold);
+    padding: 0.75em 0.5em;
+    text-align: center;
+    @include radius(5px);
+    &.regular{
+      font-weight: 400;
+    }
+    &:focus{
+      outline: 0 none;
+    }
+    &.sky{
+      @include btn-mixin($sky,$sky);
+    }
+    &.navy{
+      @include btn-mixin($navy,$navy);
+    }
+    &.min-width-140{
+      @include btn-min-width(140px);
+    }
+    &.min-width-150{
+      @include btn-min-width(150px);
+    }
+    &.min-width-215{
+      @include btn-min-width(215px);
+    }
+  }
+  i{
+    margin-left: 5px;
+  }
+}
+.back-btn{
+  @include text-format-weight(1.2em,$orange,500);
+  background-color: transparent;
+  padding: 0;
+  background-color: transparent;
+  border:0 none;
+  cursor: pointer;
+  i{
+    font-size:1.2em;
+    margin-right: 0.2em;
+    vertical-align: middle;
+  }
+}

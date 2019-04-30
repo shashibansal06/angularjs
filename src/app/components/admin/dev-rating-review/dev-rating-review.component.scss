@@ -1,0 +1,46 @@
+@import 'style/base';
+.rating-page{
+  .box{
+    border:0 none;
+    background-color:transparent;
+    padding:0em;
+    margin-bottom: 3.2em;
+    .box-inner{
+      h3{
+        font-weight: bold;
+      }
+      .right_sec{
+        border: 0 none;
+        @media screen and (max-width:992px){
+          margin: 0;
+          padding-top:0;
+        }
+        @media screen and (max-width:767px){
+          padding-top:15px;
+        }
+      }
+    }
+  }
+  .form-group{
+    label{
+      @include text-format-weight(1em,$darksky,600);
+    }
+    textarea{
+      &.form-control{
+        border:0 none;
+        border-bottom:2px solid $darksky;
+        min-height: 70px;
+        background-color: transparent;
+        padding:0 0.5em 0.5em 0.5em;
+      }
+    }
+    &.submit-btn{
+      margin-top: 3em;
+      @media screen and (max-width:992px){
+        margin-top: 2em;
+      }
+    }
+  }
+}
+
+

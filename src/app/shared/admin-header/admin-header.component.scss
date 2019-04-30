@@ -1,0 +1,98 @@
+@import 'style/base';
+.admin-header{
+  padding-left: 14.5em;
+  @media screen and (max-width:767px){
+    padding-left: 0px;
+  }
+  .header-inner{
+    padding: 10px 1em;
+    margin:0;
+    @media screen and (max-width:767px){
+      padding: 10px 0;
+    }
+    .form-group{
+      margin-bottom: 0;
+      &.input-group{
+        .input-group-text{
+          background-color: #EDEDED;
+          color: #5b5d5f;
+          border-color: #EDEDED;
+        }
+      }
+      input,select,textarea{
+        &.form-control{
+          @include text-format-weight(0.95em,$black,400);
+          padding: 0.5em;
+          border-color:#EDEDED;
+          background-color:#EDEDED;
+        }
+      }
+    }
+    .admin-header-right{
+      @media screen and (max-width:767px){
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 10px;
+      }
+      .notification{
+        @include display(middle);
+        @include pos(r, null);
+        i{
+          @include text-format(14px,#8ca0b3);
+          cursor: pointer;
+          @media screen and (max-width:767px){
+            font-size: 20px;
+          }
+        }
+        span{
+          @include text-format-weight(9px,$white,400);
+          @include radius(50%);
+          @include height-width(16px,16px);
+          @include pos(a, -4px -8px null null);
+          font-size: 9px;
+          border: 2px solid $white;
+          line-height: 8px;
+        }
+      }
+      .user-profile{
+        @include display(middle);
+        margin-left: 1.5em;
+        .dropdown-menu{
+          min-width: 220px;
+          .dropdown-item{
+            @include text-format-weight(0.95em,$black,500);
+            padding: 0.6em 1em;
+          }
+        }
+        button{
+          background-color: transparent;
+          border: 0 none;
+          &.dropdown-toggle::after {
+            margin-left: 10px;
+            border-top-color:  #8ca0b3;
+            vertical-align: middle;
+            @media screen and (max-width:767px){
+              margin-left: 0;
+              font-size: 20px;
+            }
+          }
+          span{
+            @include display(middle);
+            @include text-format-weight(14px,#222,500);
+            @media screen and (max-width:767px){
+              display: none;
+            }
+          }
+          .user-img{
+            @include display(middle);
+            margin-right: 10px;
+            @include height-width(30px,30px);
+            @include radius(50%);
+            overflow: hidden;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,48 @@
+@import 'style/base';
+.dashboard-detail-page{
+  .box{
+    .box-inner{
+      h2{
+        display: inline-block;
+        @include text-format-weight(0.75em,rgba($black,0.5),500);
+        span{
+          padding-right: 5px;
+          font-weight: 600;
+          border-right: 1px solid rgba($black,0.5);
+          margin-right: 5px;
+          font-size:1.2em;
+        }
+      }
+      h3{
+        @include text-format-weight(1.6em,$black,600);
+      }
+      .skill-list{
+        li{
+          @include text-format-weight(1em,$darksky,500);
+          display: inline-block;
+          &:after{
+            display: inline-block;
+            content: ',';
+            margin-right: 5px;
+            font-size: 1em;
+          }
+          a{
+            color: $darksky;
+          }
+        }
+      }
+      .right_sec{
+        @media screen and (max-width:992px){
+          margin-top: 15px;
+        }
+      }
+    }
+  }
+  .detail-info{
+    p{
+      @include text-format-weight(1em,$black,400);
+      padding-top:1em;
+      text-align: justify;
+    }
+  }
+}

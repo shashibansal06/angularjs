@@ -1,0 +1,21 @@
+<aside class="sidebar" >
+  <div class="logo-outer d-flex justify-content-between align-items-center">
+    <div class="logo"><a routerLink="/dashboard" routerLinkActive="active"><img src="assets/images/white_logo.svg" class="img-fluid"></a></div>
+    <div class="menu-icon"><span class="icon-menu-three-line" (click)="onClick()"></span></div>
+  </div>
+  <nav [class.selected]="menu">
+    <ul>
+      <li><a routerLink="/dashboard" routerLinkActive="active">Dashboard</a></li>
+      <li><a routerLink="/my-projects" routerLinkActive="active">My Projects</a></li>
+      <li><a routerLink="/favourite-developer" routerLinkActive="active">Favourite Developers</a></li>
+      <li><a routerLink="/developer-matching" routerLinkActive="active">Developers in Matching</a></li>
+      <li><a routerLink="/post-job" routerLinkActive="active">Post a Project</a></li>
+    </ul>
+    <ul>
+      <li><a routerLink="/dev/dashboard" routerLinkActive="active">Dashboard</a></li>
+      <li><a routerLink="/your-client" routerLinkActive="active">My Clients</a></li>
+      <li><a routerLink="/dev/favourite-project" routerLinkActive="active">Favourite Projects</a></li>
+      <li><a routerLink="/dev/job-match" routerLinkActive="active">Projects in Matching</a></li>
+    </ul>
+  </nav>
+</aside>

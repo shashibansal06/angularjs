@@ -1,0 +1,137 @@
+@import 'style/base';
+#home{
+  .header {
+    background-color: transparent;
+    @include box-shadow-none();
+    &.sticky{
+      background-color: $darksky;
+      z-index: 9;
+    }
+    .logo {
+      .white-logo{
+        display: block;
+      }
+      .blue-logo{
+        display: none;
+      }
+      @media screen and (max-width:767px) {
+        .white-logo{
+          display: none;
+        }
+        .blue-logo{
+          display: block;
+        }
+      }
+    }
+    nav {
+      &.menu-show {
+        @media screen and (max-width: 992px) {
+          background-color: $black;
+        }
+      }
+      ul {
+        li {
+          a {
+            color: $white;
+            &:hover,
+            &.active {
+              color: $white;
+            }
+            &:before {
+              background-color: $white;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.header {
+  @include box-shadow-n(0, 0, 5px, rgba(0, 0, 0, 0.2));
+  @include pos(f, 0 null null 0);
+  width: 100%;
+  background-color: #fff;
+  z-index:2;
+  @media screen and (max-width: 992px) {
+    padding: 10px;
+  }
+  @media screen and (max-width:767px){
+    position: static;
+  }
+  .logo {
+    @media screen and (max-width: 992px) {
+      max-width: 100px;
+    }
+    .white-logo{
+      display: none;
+    }
+  }
+  .menu {
+    display: none;
+    margin-left: 10px;
+    font-size: 28px;
+    cursor: pointer;
+    @media screen and (max-width: 992px) {
+      @include display(middle);
+    }
+  }
+  nav {
+    @include display(middle);
+    margin-right: 50px;
+    @media screen and (max-width: 992px) {
+      margin-right: 20px;
+      height: 100vh;
+    }
+    @media screen and (max-width: 992px) {
+      @include animate(0.5s, linear);
+      @include pos(f, 0 null null 0);
+      @include translateX(-100%);
+    }
+    &.menu-show {
+      @include translateX(0);
+      @media screen and (max-width: 992px) {
+        background-color: $white;
+        z-index: 9;
+        width: 200px;
+      }
+    }
+    ul {
+      li {
+        @include display(middle);
+        margin-left: 30px;
+        @media screen and (max-width: 992px) {
+          margin-left: 10px;
+          display: block;
+          margin-left: 0;
+        }
+        a {
+          @include text-format-weight(0.87em, #414141, 500);
+          padding: 32px 10px;
+          @include pos(r, null);
+          display: block;
+          overflow: hidden;
+          @media screen and (max-width: 992px) {
+            padding: 15px 10px;
+          }
+          &:hover,
+          &.active {
+            color: $darksky;
+            &:before {
+              width: 100%;
+            }
+          }
+          &:before {
+            @include pos(a, null null 0 0);
+            @include height-width(6px, 0px);
+            background-color: $darksky;
+            content: '';
+            @include animate(0.5s, linear);
+            @media screen and (max-width: 992px) {
+              height: 2px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

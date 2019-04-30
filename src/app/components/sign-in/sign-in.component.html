@@ -1,0 +1,46 @@
+<div class="content-box">
+  <div class="container">
+    <div class="row center-layout">
+      <div class="col-md-6 left-side">
+        <h1>Sign in to account</h1>
+        <div class="form-feilds">
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Name" />
+          </div>
+          <div class="form-group input-group">
+            <input
+              type="password"
+              class="form-control"
+              placeholder="Password"
+            />
+            <div class="input-group-append password-icon">
+              <span class="input-group-text"><i class="icon-eye"></i></span>
+            </div>
+          </div>
+          <div class="form-group row forgot-row align-items-center">
+            <div class="col-sm-6">
+              <span routerLink="/forgot">Forgot Password?</span>
+            </div>
+            <div class="col-sm-6">
+              <button class="btn btn-block themeBtn" routerLink="/dashboard">
+                Login
+              </button>
+            </div>
+          </div>
+          <div class="form-group or-section text-center"><span>Or</span></div>
+          <div class="form-group">
+            <button class="btn btn-block themeBtn sky" routerLink="/signup">
+              Sign up as Business
+            </button>
+            <button class="btn btn-block themeBtn navy" routerLink="/signup">
+              Sign up as Developer
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 order-md-6 right-side">
+        <app-login-rightside></app-login-rightside>
+      </div>
+    </div>
+  </div>
+</div>

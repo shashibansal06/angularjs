@@ -1,0 +1,32 @@
+<app-banner>My Clients</app-banner>
+<div class="admin-main grey-layout">
+  <div class="common-page myclient-page">
+      <div class="box" *ngFor="let list of [1,2,3]">
+        <div class="row box-inner">
+          <div class="col-md-11 text-right"><span class="icon-trash"></span></div>
+          <div class="col-12">
+            <div class="row align-items-center">
+              <div class="col-md-auto">
+                <div  class="user-img"> 
+                  <img alt="image" class="img-fluid" src="assets/images/profile.jpg">
+                </div>
+              </div>
+              <div class="col-md-9 col-lg-10 row d-md-flex align-items-end justify-content-between">
+                <div class="col-xl-4">
+                  <h2>John Smith</h2>
+                  <h3>Email : johnsmith123@gmail.com</h3>
+                </div>
+                <div class="col-xl-4">
+                  <h3>Phone Number : 0123456789</h3>
+                </div>
+                <div class="col-xl-4 text-xl-right last-child">
+                  <h4><a routerLink="/dev/rating-review">Give Rating and Review</a></h4>
+                  <h3>Skype ID : Live:wikisampleid22</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>

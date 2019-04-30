@@ -1,0 +1,57 @@
+.center-layout{
+  @include box-shadow-n(0,0, 10px, rgba($black,0.2));
+  .left-side{
+    background-color: $white;
+    padding: 3.5em 6.5em;
+    @media screen and (max-width:1200px){
+      padding: 2.5em 1.5em;
+    }
+    h1{
+      @include text-format-weight(2em,$black,600);
+      margin-bottom:0.8em;
+    }
+    .submit-btn{
+      margin-top:2em;
+    }
+    .capacha-outer{
+      margin-top:1em;
+    }
+  }
+  .right-side{
+    padding: 3.5em 3em;
+    background: {
+      image: url("#{$image-path}/login-right-bg.png");
+      position: bottom center;
+      repeat: no-repeat;
+      size: cover;
+    };
+    @media screen and (max-width:1200px){
+      padding: 2.5em 2.5em;
+    }
+    h3{
+      @include text-format-weight(2.64em,$white,600);
+      span{
+        color: $sky;
+        display: block;
+      }
+    }
+    p{
+      @include text-format-weight(1.18em,$white,400);
+      padding-bottom:1em;
+    }
+    .carousel-indicators{
+      justify-content: flex-start;
+      margin:0;
+      li{
+        background-color: $white;
+        @include height-width(4px,20px);
+      }
+      .active{
+        background-color: $sky;
+      }
+    }
+    .carousel-control{
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,31 @@
+@import 'style/base';
+.common-page{
+  .form-group{
+    text-align: right;
+    label{
+      color: rgba($black,0.5);
+    }
+    .select-outer{
+      width: auto;
+      display: inline-block;
+      margin-left: 10px;
+      background-color: white;
+      select{
+        &.form-control{
+          padding: 0.5em 2em 0.5em 1em;
+          @include radius(4px);
+          color: $sky;
+        }
+      }
+    }
+  }
+  .box{
+    .box-inner{
+      h2{
+        span{
+          border:0 none;
+        }
+      }
+    }
+  }
+}

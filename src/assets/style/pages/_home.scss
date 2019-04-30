@@ -1,0 +1,12 @@
+.content-box{
+  padding:5.6em 0;
+  margin-top: 5.3em;
+  min-height: calc(100vh - 348px);
+  @media screen and (max-width:992px){
+    margin-top: 4.8em;
+    padding:4em 0;
+  }
+  @media screen and (max-width:767px){
+    margin-top: 0;
+  }
+}

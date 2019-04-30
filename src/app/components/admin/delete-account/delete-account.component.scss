@@ -1,0 +1,10 @@
+@import 'style/base';
+.delete-account{
+  h2{
+
+    @include text-format-weight(1.2em,$darksky,600);
+  }
+  p{
+    margin-bottom: 2em;
+  }
+}

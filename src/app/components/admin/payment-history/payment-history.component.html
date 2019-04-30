@@ -1,0 +1,23 @@
+<app-banner>Payment History</app-banner>
+<div class="admin-main paymentHis-page">
+  <div class="form-group">
+    <label>Show Result</label>
+    <div class="select-outer">
+      <select class="form-control">
+        <option>Last 6 Days</option>
+      </select>
+    </div>
+  </div>
+  <div class="table-responsive col-xl-4 offset-xl-4">
+      <table class="table custom-table table-bordered text-center">
+        <tr>
+          <th>Date</th>
+          <th>Paid Amount</th>
+        </tr>
+        <tr *ngFor="let data of [1,2,3,4,5]">
+          <td>22/03/2018</td>
+          <td>$50</td>
+        </tr>
+      </table>
+    </div>
+</div>

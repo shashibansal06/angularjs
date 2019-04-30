@@ -1,0 +1,34 @@
+<div class="admin-header">
+  <div class="header-inner row align-items-center">
+    <div class="form-group input-group col-sm-8 col-md-6 col-lg-4">
+      <div class="input-group-prepend password-icon">
+        <span class="input-group-text"><i class="icon-search"></i></span>
+      </div>
+      <input type="text" class="form-control" placeholder="Find Developers" />
+    </div>
+    <div class="admin-header-right col-sm-4 col-md-6 col-lg-8 text-sm-right">
+      <div class="notification">
+        <i class="icon-bell" routerLink="/notification"></i>
+        <span class="badge badge-primary">1</span>
+      </div>
+      <div class="user-profile btn-group" dropdown>
+          <button id="button-basic" dropdownToggle type="button" class="btn btn-primary dropdown-toggle"
+          aria-controls="dropdown-alignment">
+              <div class="user-img">
+                  <img src="assets/images/profile.jpg" alt="image" class="img-fluid">
+              </div>
+              <span>Stefano Amedeo</span>
+          </button>
+          <ul  id="dropdown-alignment" *dropdownMenu class="dropdown-menu dropdown-menu-right"
+          role="menu" aria-labelledby="button-alignment">
+            <li role="menuitem"><a class="dropdown-item" routerLink="/profile/general-detail">My Profile</a></li>
+            <li role="menuitem"><a class="dropdown-item" routerLink="/card-detail">Account Settings</a></li>
+            <li role="menuitem"><a class="dropdown-item" routerLink="/payment-history">Payment History</a></li>
+            <li role="menuitem"><a class="dropdown-item" routerLink="/activity-log">Activity Log</a></li>
+            <li role="menuitem"><a class="dropdown-item" routerLink="/delete-account">Delete Account</a></li>
+            <li role="menuitem"><a class="dropdown-item"  routerLink="/sign-in">Logout</a></li>
+          </ul>
+        </div>
+    </div>
+  </div>
+</div>

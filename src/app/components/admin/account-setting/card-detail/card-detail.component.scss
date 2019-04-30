@@ -1,0 +1,68 @@
+@import 'style/base';
+.btn{
+  &.addbtn{
+    border-color:$orange;
+    @include text-format-weight(1em,rgba($black,0.5),500);
+    background-color: #FCFCFC;
+    i{
+      margin-right:5px;
+    }
+  }
+}
+.card-box{
+  margin-bottom: 1em;
+  h2{
+    margin: 0 0 0.8em 0;
+    @include text-format-weight(1em,rgba($black,0.5),500);
+  }
+  .box-inner{
+    border: 1px solid #D9D9D9;
+    @include radius(4px);
+    background-color: #FCFCFC;
+    padding:1.2em 1.8em;
+    @media screen and (max-width:767px){
+      padding:1em;
+    }
+    .card-no{
+      @include text-format-weight(1.2em,rgba($black,0.5),600);
+      img{
+        margin-right: 10px;
+      }
+    }
+    .btns{
+      .btn{
+        background-color: transparent;
+        padding: 0;
+        font-size: 1.5em;
+        color: rgba($black,0.5);
+        margin:0 1em;
+        @include pos(r, null);
+        @media screen and (max-width:992px){
+          margin:0 0.5em;
+          font-size: 1em;
+        }
+        i{
+          margin: 0;
+          font-style: normal;
+        }
+        &:after{
+          content: '';
+          @include pos(a, 0   -25px null null);
+          background-color: #D9D9D9;
+          width: 1px;
+          height: 100%;
+          @media screen and (max-width:992px){
+            right:-8px;
+          }
+        }
+        &:last-child{
+          margin-right: 0;
+          &:after{
+            content:none;
+          }
+        }
+
+      }
+    }
+  }
+}

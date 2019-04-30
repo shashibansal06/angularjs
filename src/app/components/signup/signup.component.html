@@ -1,0 +1,62 @@
+<div class="content-box">
+  <div class="container">
+    <div class="row center-layout">
+      <div class="col-md-6 left-side">
+        <h1>Sign up as Business</h1>
+        <div class="custom-tabs">
+          <tabset [justified]="true">
+            <tab heading="Business">
+              <div class="form-feilds">
+                <div class="form-group">
+                  <input type="text" class="form-control" placeholder="Name">
+                </div>
+                <div class="form-group">
+                  <input type="email" class="form-control" placeholder="Email">
+                </div>
+                <div class="form-group">
+                  <input type="password" class="form-control" placeholder="Password">
+                </div>
+                <div class="form-group">
+                  <input type="password" class="form-control" placeholder="Confirm Password">
+                </div>
+                <div class="form-group capacha-outer">
+                  <img src="../assets/images/capcha.jpg" alt="" class="img-fluid">
+                </div>
+                <div class="form-group submit-btn">
+                  <button class="btn btn-block themeBtn"  routerLink="/login">Done</button>
+                </div>
+              </div>
+            </tab>
+            <tab heading="Developer">
+              <div class="form-feilds">
+                <div class="form-group">
+                  <input type="text" class="form-control" placeholder="Developer Name">
+                </div>
+                <div class="form-group">
+                  <input type="email" class="form-control" placeholder="Email">
+                </div>
+                <div class="form-group">
+                  <input type="password" class="form-control" placeholder="Password">
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control" placeholder="Confirm Password">
+                  </div>
+                <div class="form-group capacha-outer">
+                  <img src="../assets/images/capcha.jpg" alt="" class="img-fluid">
+                </div>
+                <div class="form-group submit-btn">
+                  <button class="btn btn-block themeBtn">Done</button>
+                </div>
+              </div>
+            </tab>
+          </tabset>
+        </div>
+      </div>
+      <div class="col-md-6 order-md-6 right-side">
+        <app-login-rightside></app-login-rightside>
+      </div>
+    </div>
+  </div>
+</div>
+
+

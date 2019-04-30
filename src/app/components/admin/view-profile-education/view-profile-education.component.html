@@ -1,0 +1,171 @@
+<app-banner>Dashboard</app-banner>
+<div class="admin-main">
+  <div class="profile-pages">
+    <div class="d-xl-flex justify-content-between">
+      <ul class="admin_tablink">
+        <li><a routerLink="/view/general" routerLinkActive="active">GENERAL DETAILS</a></li>
+        <li><a routerLink="/view/education" routerLinkActive="active">EDUCATION DETAILS</a></li>
+      </ul>
+    </div>
+    <div class="pro-content-outer">
+
+      <div class="top-btn text-right mt-2 mt-xl-0">
+        <button class="btn themeBtn min-width-150 topedit-btn"  (click)="staticModal.show()">Show Interest</button>
+      </div>
+      <div class="row">
+        <div class="col-12 text-center">
+          <div class="editimg-outer">
+            <div class="image">
+              <img alt="image" class="img-fluid" src="assets/images/profile.jpg">
+            </div>
+            <!-- <div class="upload-icon">
+        <span class="icon-camera"></span>
+        <input type="file">
+      </div> -->
+          </div>
+        </div>
+      </div>
+      <div class="edu-page profile-page">
+        <div class="row">
+          <div class="col-12">
+            <div class="box">
+              <h3>Tag Line</h3>
+              <p>Veniam, quis nostrud exercitation ullamco laboris nisi ut aliq</p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <h2>Educational Details 1</h2>
+          </div>
+          <div class="col-12">
+            <div class="box">
+              <h3>Education</h3>
+              <p>Master of computer applications</p>
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="box">
+              <h3>Name of college/University</h3>
+              <p>Oxford</p>
+            </div>
+          </div>
+          <div class="d-flex box no-border">
+            <div class="col-4">
+              <h3>From</h3>
+              <p>2015</p>
+            </div>
+            <div class="col-4">
+              <h3>To</h3>
+              <p>2018</p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <h2>Educational Details 2</h2>
+          </div>
+          <div class="col-12">
+            <div class="box">
+              <h3>Education</h3>
+              <p>Master of computer applications</p>
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="box">
+              <h3>Name of college/University</h3>
+              <p>Oxford</p>
+            </div>
+          </div>
+          <div class="d-flex box no-border">
+            <div class="col-4">
+              <h3>From</h3>
+              <p>2015</p>
+            </div>
+            <div class="col-4">
+              <h3>To</h3>
+              <p>2018</p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <h2>Professional Details 1</h2>
+          </div>
+          <div class="col-12">
+            <div class="box">
+              <h3>Company Name</h3>
+              <p>Igniva Solutions</p>
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="box">
+              <h3>Designation</h3>
+              <p>UI and Ux Designer</p>
+            </div>
+          </div>
+          <div class="d-flex box no-border">
+            <div class="col-4">
+              <h3>From</h3>
+              <p>2015</p>
+            </div>
+            <div class="col-4">
+              <h3>To</h3>
+              <p>2018</p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <h2>Certifications(if any) </h2>
+            <div class=""></div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <h2>Projects 1</h2>
+          </div>
+          <div class="col-12">
+            <div class="box">
+              <h3>Project Title</h3>
+              <p>Spa Amdroid App</p>
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="box no-border">
+              <h3>Description</h3>
+              <p>UI and Ux Designer</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> 
+</div>
+
+<div class="modal customModal  fade" bsModal #staticModal="bs-modal" [config]="{backdrop: 'static'}" tabindex="-1" role="dialog"
+  aria-labelledby="dialog-static-name">
+  <div class="modal-dialog">
+    <div class="modal-content show-interest">
+      <div class="modal-header">
+        Select the projects you are showing interest
+        <button type="button" class="close pull-right" aria-label="Close" (click)="staticModal.hide()">
+          <span aria-hidden="true" class="icon-cancel"></span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="form-group radio-outer" *ngFor="let list of [1,2,3]">
+          <label class="z_checked">
+            <input type="checkbox" name="checkboxInline">
+            <span>&nbsp;</span>
+          </label>
+          <h2>Project 1</h2>
+          <p>Required Spa App</p>         
+        </div>
+        <div class="form-group submit-btn mt-2 mt-md-5 text-center">
+          <button class="btn themeBtn min-width-215" routerLink="/">Show Interest</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

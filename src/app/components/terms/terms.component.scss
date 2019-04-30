@@ -1,0 +1,14 @@
+@import 'style/base';
+.contentpages{
+  h2{
+    @include text-format-weight(1.1em,$darksky,600);
+    margin-bottom:0.8em;
+  }
+  p{
+    color: $black;
+    text-align: justify;
+  }
+  .submit-btn{
+    margin-top: 2.5em;
+  }
+}

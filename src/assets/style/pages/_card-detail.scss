@@ -1,0 +1,72 @@
+.card-detail{
+  .form-feilds{
+    padding: 3em 3em;
+    margin:3em 0 1em;
+    border:1px solid #E3E3E9;
+    @include radius(5px);
+    @media screen and (max-width:767px){
+      padding: 2em 1em;
+      margin:2em 0 1em;
+    }
+    .form-group{
+      margin-bottom: 2em;
+      @media screen and (max-width:767px){
+        margin-bottom: 1em;
+      }
+    }
+    .last{
+      .form-group{
+        margin-bottom: 0;
+        @media screen and (max-width:767px){
+          margin-bottom: 1em;
+        }
+      }
+    }
+    label{
+      text-transform: uppercase;
+      margin-bottom: 5px;
+      @include text-format-weight(0.8em,#6D6E70,600);
+    }
+    .radio-outer{
+      label{
+        &.z_radio{
+          @include text-format-weight(1em,$black,600);
+          text-transform: none;
+          span{
+            display:inline-block;
+          }
+        }
+        p{
+          @include text-format-weight(0.95em,#788995,500);
+          display: block;
+          padding:5px 0px 0 0px;
+          line-height: 28px;
+          margin: 0;
+          @media screen and (max-width:479px){
+            line-height: 24px;
+          }
+        }
+      }
+      .card-img{
+        text-align: right;
+      }
+    }
+  }
+  .fe-cost{
+    p{
+      @include text-format-weight(0.95em,$sky,500);
+      i{
+        cursor: pointer;
+        margin-left: 5px;
+      }
+    }
+  }
+  .submit-btn{
+    .btn{
+      margin: 0 5px;
+      @media screen and (max-width:576px){
+        margin: 5px 0;
+      }
+    }
+  }
+}

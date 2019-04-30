@@ -1,0 +1,19 @@
+<app-banner>My Profile</app-banner>
+<div class="admin-main">
+  <div class="profile-pages">
+    <div class="d-xl-flex justify-content-between">
+      <ul class="admin_tablink">
+        <li><a  routerLink="/profile/general-detail" routerLinkActive="active">GENERAL DETAILS</a></li>
+        <li><a  routerLink="/profile/rating" routerLinkActive="active">RATING AND REVIEWS</a></li>
+      </ul>
+      <div class="top-btn text-right mt-2 mt-xl-0" *ngIf="router.url === '/profile/general-detail'">
+        <button class="btn themeBtn min-width-150">Edit</button>
+      </div>
+    </div>
+    <div class="pro-content-outer">
+
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
+

@@ -1,0 +1,32 @@
+@import 'style/base';
+.forgot-row{
+  margin-top: 1.2em;
+  span{
+    @include text-format-weight(0.95em,#6D6E70,500);
+    text-decoration: underline;
+    cursor: pointer;
+    @media screen and (max-width:1200px){
+      margin-bottom: 10px;
+    }
+  }
+}
+.or-section{
+  @include pos(r, null);
+  margin:3em 0;
+  @media screen and (max-width:1200px){
+    margin:1.5em 0;
+  }
+  &:before{
+    @include pos(a,calc(50% - 0.5px) null null 0);
+    @include height-width(1px,100%);
+    border-top:1px dashed #D8D8D8;
+    content: '';
+  }
+  span{
+    background-color: $white;
+    z-index: 1;
+    @include pos(r, null);
+    padding: 0 10px;
+    @include text-format-weight(1em,#6D6E70,400);
+  }
+}

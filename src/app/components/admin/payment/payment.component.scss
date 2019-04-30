@@ -1,0 +1,19 @@
+@import 'style/base';
+.card-detail{
+  .title-row{
+    h3{
+      @include text-format-weight(1em,$black,500);
+    }
+    h4{
+      @include text-format-weight(0.8em,rgba($black,0.5),500);
+      span{
+        @include text-format-weight(2.2em,$orange,500);
+        margin-left: 5px;
+      }
+    }
+  }
+  .form-feilds{
+    margin-top: 0;
+  }
+}
+

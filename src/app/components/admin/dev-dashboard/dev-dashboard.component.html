@@ -1,0 +1,36 @@
+<app-banner>Dashboard</app-banner>
+<div class="admin-main grey-layout">
+  <div class="common-page dashboard-page">
+    <!-- uncomment when no data start-->
+    <div class="no-data text-center">
+      <div class="image">
+        <img src="assets/images/no-data.svg" alt="" class="img-fluid">
+      </div>
+      <p>Nothing to show</p>
+      <p>Search the projects, get contact details of the clients and start working with them</p>
+      <p>Or</p>
+      <div class=""><button class="btn themeBtn min-width-140">Search Project</button></div>
+    </div>
+    <!-- uncomment when no data end-->
+
+    <div class="box" *ngFor="let list of [1,2,3]">
+      <div class="row align-items-start justify-content-between box-inner">
+        <div class="col-lg-8 col-xl">
+          <h2 class="project-no"><span>Project 1</span>  Posted an 6 hour ago</h2>
+          <h3>Looking android developer</h3>
+          <p>Description : Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua….. </p>
+          <ul class="skill-list">
+            <li>Custom Designer</li>
+            <li>Custom Stack Developer</li>
+            <li>Hybrid Developer</li>
+          </ul>
+        </div>
+        <div class="col-lg-4 col-xl-auto right_sec">
+          <h2>Price</h2>
+          <h3>$10/per hour</h3>
+          <button class="btn themeBtn min-width-140" routerLink="/dev/dashboard-detail">View Project</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

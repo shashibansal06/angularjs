@@ -1,0 +1,16 @@
+@import 'style/base';
+.interested-developer{
+  .box{
+    padding: 1em 1.8em;
+    @media screen and (max-width:992px){
+      padding: 1em 1em;
+    }
+    .box-inner{
+      p{
+        margin:0.8em 0 0 0;
+      }
+    }
+  }
+}
+
+

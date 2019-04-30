@@ -1,0 +1,58 @@
+<app-banner>Payment</app-banner>
+<div class="admin-main paymentHis-page">
+  <div class="row toprow">
+    <div class="col-12">
+      <button class="back-btn"><i class="icon-back-arrow"></i> Back</button>
+    </div>
+  </div>
+  <div class="card-detail col-lg-8 offset-lg-2 mt-3 mt-sm-0">
+      <div class="d-sm-flex align-items-center justify-content-between title-row">
+        <h3>Pay and get the contact detail of developer</h3>
+        <h4>Amount Paid<span>$60</span></h4>
+      </div>
+      <div class="form-feilds">
+        <div class="form-group row radio-outer">
+          <div class="col-md-9">
+            <label class="z_radio">
+              <input type="radio" name="radioInline" checked="checked" />
+              <span>Credit Card<p>Safe money transfer using your bank account. Visa, Maestro, Discover, American Express.</p></span>
+            </label>
+          </div>
+          <div class="col-md-3 card-img">
+            <img src="assets/images/cards.jpg" alt="" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label>CARD NUMBER</label>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="0000 0000 0000 0000"
+          />
+        </div>
+        <div class="row last">
+          <div class="form-group col-md-6">
+            <label>NAME ON CARD</label>
+            <input type="text" class="form-control" placeholder="Name" />
+          </div>
+          <div class="form-group col-md-3">
+            <label>EXPIRY DATE</label>
+            <input type="text" class="form-control" placeholder="MM / YY" />
+          </div>
+          <div class="form-group col-md-3">
+            <label>CVV CODE</label>
+            <input type="text" class="form-control" placeholder="Code" />
+          </div>
+        </div>
+      </div>
+      <div class="form-group fe-cost">
+        <p>DevGap Fee Cost <i class="icon-info"></i></p>
+      </div>
+      <div class="form-group text-center submit-btn">
+        <button type="submit" class="btn themeBtn  min-width-150" routerLink="/">
+          Pay
+        </button>
+      </div>
+    </div>
+</div>
+
